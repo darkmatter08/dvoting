@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, include, url
 from voting import views
 from django.views.generic import simple
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 #from store import urls
 
 # Uncomment the next two lines to enable the admin:
@@ -19,10 +20,12 @@ urlpatterns = patterns('',
     # url(r'^admin/', include(admin.site.urls)),
 
     #landing page, works with views.home
-    url(r'^$', 'django.views.generic.simple.direct_to_template', {'template': 'static.html'}),
+    url(r'^$', 'django.views.generic.simple.direct_to_template', {'template': 'base.html'}),
  	#Home view!
     url(r'^home/$', views.home),
     #Store app view
     url(r'^store/', include('store.urls')),
     #url(r'^store/', store.views.first),
 )
+
+urlpatterns += staticfiles_urlpatterns()

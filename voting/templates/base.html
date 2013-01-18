@@ -1,0 +1,20 @@
+<!-- Shawn Jain -->
+<!-- 1/16/2013 -->
+<!-- This file covers the basics of the page - the top nav bar and the title. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Base.html </title>
+</head>
+
+<body>
+	<h1>BuyEverything Store!</h1>
+	<div id="username">
+		Hi, {{ Customer.name }}
+	</div>
+	<div id="content">
+			{% block content %}
+			{% endblock content %}
+	</div>
+</body>
+</html>

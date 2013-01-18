@@ -1,0 +1,23 @@
+<!-- Shawn Jain -->
+<!-- 1/16/2013 -->
+<!-- This file lists all of the orders. -->
+
+{% extends "base.html" %}
+
+{% block content %}
+	<p>Hi, {{ Customer.name }}. This is a list of your orders. ALl have been shipped to {{Customer.addr}}.</p>
+
+	<table>
+		<tr>
+			<td>Order ID</td>
+			<td>1st item in order</td>
+		</tr>
+		<!-- How do I feed in the variable orderlist? In the context? How do I get associated products?-->
+		{% for order in orderlist %}
+		<tr>
+			<td>{{ order.oid }}</td>
+			<td>Product????</td>
+		</tr>
+		{% endfor %}
+	</table>
+{% endblock %}
