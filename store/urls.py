@@ -18,4 +18,11 @@ urlpatterns = patterns('',
 	url(r'^place/$', views.place),
 	# view all orders
 	url(r'^view/$', views.viewall),
+
+	# API urls
+	url(r'^place/api$', views.placeapi),
+
+
+	# showInfo URLs
+	url(r'^showinfo/', views.showinfo),
 )

@@ -3,6 +3,7 @@
 # Data Models within the store app
 
 from django.db import models
+from django.forms import ModelForm
 
 # Create your models here.
 class Customer(models.Model):
@@ -33,3 +34,13 @@ class Product(models.Model):
 
 	def __unicode__(self):
 		return self.description
+
+# Class to make an order form
+class OrderForm(ModelForm):
+	class Meta:
+		model = Order
+
+# Class to make a customer form for new customers
+class CustomerForm(ModelForm):
+	class Meta:
+		model = Customer

@@ -1,0 +1,14 @@
+<!-- Shawn Jain -->
+<!-- 1/17/2013 -->
+<!-- This file generates a form to place an order.  -->
+
+{% extends "base.html" %}
+
+{% block content %}
+	<p>Hi, {{ Customer.name }}. Place your order here!</p>
+	<form action="/store/place/api" method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Submit"/>
+	</form>
+{% endblock %}
